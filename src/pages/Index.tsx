@@ -161,16 +161,16 @@ const Index = () => {
             <Card className="hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="MapPin" size={28} className="text-primary" />
+                  <Icon name="Train" size={28} className="text-primary" />
                 </div>
-                <CardTitle className="text-2xl">GPS мониторинг</CardTitle>
+                <CardTitle className="text-2xl">ЕПУТС ШП</CardTitle>
                 <CardDescription className="text-base">
-                  Отслеживание транспорта в режиме реального времени
+                  Управление международными железнодорожными перевозками
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Контроль местоположения, маршрутов и состояния транспортных средств с высокой точностью
+                  Комплексное решение для маршрутов Шелкового пути между Китаем, Центральной Азией и Европой с автоматизацией документооборота
                 </p>
               </CardContent>
             </Card>
@@ -178,16 +178,16 @@ const Index = () => {
             <Card className="hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Gauge" size={28} className="text-secondary" />
+                  <Icon name="FileText" size={28} className="text-secondary" />
                 </div>
-                <CardTitle className="text-2xl">Телематика</CardTitle>
+                <CardTitle className="text-2xl">ЕПУТС СМГС</CardTitle>
                 <CardDescription className="text-base">
-                  Дистанционный контроль параметров транспорта
+                  Электронные перевозочные документы
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Мониторинг расхода топлива, скорости, температуры и других критических показателей
+                  Система электронного документооборота по Соглашению СМГС с формированием e-SMGS накладных и интеграцией с железнодорожными системами
                 </p>
               </CardContent>
             </Card>
@@ -195,16 +195,16 @@ const Index = () => {
             <Card className="hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="BarChart3" size={28} className="text-primary" />
+                  <Icon name="Network" size={28} className="text-primary" />
                 </div>
-                <CardTitle className="text-2xl">Аналитика</CardTitle>
+                <CardTitle className="text-2xl">ЕПУТС ЦС</CardTitle>
                 <CardDescription className="text-base">
-                  Отчеты и анализ эффективности
+                  Центральная система координации
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Детальные отчеты по использованию транспорта, затратам и оптимизации логистики
+                  Централизованная платформа для координации железнодорожных перевозок с диспетчеризацией и мониторингом подвижного состава
                 </p>
               </CardContent>
             </Card>
@@ -224,13 +224,13 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Truck" size={32} className="text-primary" />
+                  <Icon name="Building" size={32} className="text-primary" />
                 </div>
-                <CardTitle>Мониторинг транспорта</CardTitle>
+                <CardTitle>ЕПУТС ТС</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Контроль местоположения и состояния транспортных средств
+                  Управление транспортной станцией с автоматизацией приема и отправки грузов
                 </p>
               </CardContent>
             </Card>
@@ -238,13 +238,13 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Route" size={32} className="text-secondary" />
+                  <Icon name="Package" size={32} className="text-secondary" />
                 </div>
-                <CardTitle>Оптимизация маршрутов</CardTitle>
+                <CardTitle>ЕПУТС Карго</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Планирование и корректировка маршрутов для экономии ресурсов
+                  Система управления грузовыми операциями с отслеживанием и документооборотом
                 </p>
               </CardContent>
             </Card>
@@ -252,13 +252,13 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="FileText" size={32} className="text-primary" />
+                  <Icon name="Globe" size={32} className="text-primary" />
                 </div>
-                <CardTitle>Отчетность</CardTitle>
+                <CardTitle>Электронный документооборот</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Детальные отчеты по использованию транспорта
+                  Формирование электронных накладных с ЭЦП и юридически значимый документооборот
                 </p>
               </CardContent>
             </Card>
@@ -266,13 +266,13 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Wrench" size={32} className="text-secondary" />
+                  <Icon name="BarChart3" size={32} className="text-secondary" />
                 </div>
-                <CardTitle>Интеграция систем</CardTitle>
+                <CardTitle>Аналитика и отчетность</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Подключение к существующим корпоративным системам
+                  Статистические отчеты, аналитические панели и прогнозирование для оптимизации перевозок
                 </p>
               </CardContent>
             </Card>
@@ -302,9 +302,9 @@ const Index = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Надежность</h3>
+                  <h3 className="text-xl font-bold mb-2">Цифровизация процессов</h3>
                   <p className="text-muted-foreground">
-                    Стабильная работа систем с минимальным временем простоя и бесперебойным мониторингом
+                    Переход от бумажного к электронному документообороту, ускорение обработки документов и снижение ошибок
                   </p>
                 </div>
               </div>
@@ -312,13 +312,13 @@ const Index = () => {
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
-                    <Icon name="Trophy" size={24} className="text-secondary" />
+                    <Icon name="Eye" size={24} className="text-secondary" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Экономия</h3>
+                  <h3 className="text-xl font-bold mb-2">Прозрачность перевозок</h3>
                   <p className="text-muted-foreground">
-                    Снижение затрат на топливо, оптимизация маршрутов и повышение эффективности использования транспорта
+                    Отслеживание грузов в реальном времени, доступ к информации 24/7 и информирование всех участников
                   </p>
                 </div>
               </div>
@@ -326,13 +326,13 @@ const Index = () => {
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Icon name="Lock" size={24} className="text-primary" />
+                    <Icon name="TrendingDown" size={24} className="text-primary" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Контроль</h3>
+                  <h3 className="text-xl font-bold mb-2">Снижение затрат</h3>
                   <p className="text-muted-foreground">
-                    Полный контроль над транспортом: местоположение, скорость, расход топлива и состояние транспорта
+                    Сокращение времени на оформление документов, уменьшение операционных расходов и оптимизация логистики
                   </p>
                 </div>
               </div>
@@ -340,13 +340,13 @@ const Index = () => {
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
-                    <Icon name="Headphones" size={24} className="text-secondary" />
+                    <Icon name="Globe" size={24} className="text-secondary" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Интеграция</h3>
+                  <h3 className="text-xl font-bold mb-2">Международная совместимость</h3>
                   <p className="text-muted-foreground">
-                    Легкая интеграция с любыми учетными системами и бизнес-процессами компании
+                    Соответствие международным стандартам СМГС, интеграция с системами разных стран и мультимодальные перевозки
                   </p>
                 </div>
               </div>
