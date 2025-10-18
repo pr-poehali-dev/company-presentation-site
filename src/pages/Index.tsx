@@ -7,6 +7,7 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,6 +20,7 @@ const Index = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -38,8 +40,29 @@ const Index = () => {
               <a href="#advantages" onClick={(e) => scrollToSection(e, '#advantages')} className="text-foreground hover:text-primary transition-colors">Преимущества</a>
               <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="text-foreground hover:text-primary transition-colors">Контакты</a>
             </div>
-            <Button className="hidden md:inline-flex" onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}>Связаться</Button>
+            <div className="flex items-center gap-4">
+              <Button className="hidden md:inline-flex" onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}>Связаться</Button>
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="md:hidden"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
+              </Button>
+            </div>
           </div>
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in">
+              <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="block text-foreground hover:text-primary transition-colors py-2">Главная</a>
+              <a href="#about" onClick={(e) => scrollToSection(e, '#about')} className="block text-foreground hover:text-primary transition-colors py-2">О компании</a>
+              <a href="#products" onClick={(e) => scrollToSection(e, '#products')} className="block text-foreground hover:text-primary transition-colors py-2">Продукты</a>
+              <a href="#services" onClick={(e) => scrollToSection(e, '#services')} className="block text-foreground hover:text-primary transition-colors py-2">Услуги</a>
+              <a href="#advantages" onClick={(e) => scrollToSection(e, '#advantages')} className="block text-foreground hover:text-primary transition-colors py-2">Преимущества</a>
+              <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="block text-foreground hover:text-primary transition-colors py-2">Контакты</a>
+              <Button className="w-full mt-4" onClick={() => { document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); setIsMobileMenuOpen(false); }}>Связаться</Button>
+            </div>
+          )}
         </div>
       </nav>
 
