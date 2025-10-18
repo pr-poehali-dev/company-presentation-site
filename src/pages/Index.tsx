@@ -13,6 +13,14 @@ const Index = () => {
     console.log('Form submitted:', formData);
   };
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
@@ -23,14 +31,14 @@ const Index = () => {
               <span className="text-2xl font-bold">TechCorp</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors">Главная</a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">О компании</a>
-              <a href="#products" className="text-foreground hover:text-primary transition-colors">Продукты</a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors">Услуги</a>
-              <a href="#advantages" className="text-foreground hover:text-primary transition-colors">Преимущества</a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">Контакты</a>
+              <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="text-foreground hover:text-primary transition-colors">Главная</a>
+              <a href="#about" onClick={(e) => scrollToSection(e, '#about')} className="text-foreground hover:text-primary transition-colors">О компании</a>
+              <a href="#products" onClick={(e) => scrollToSection(e, '#products')} className="text-foreground hover:text-primary transition-colors">Продукты</a>
+              <a href="#services" onClick={(e) => scrollToSection(e, '#services')} className="text-foreground hover:text-primary transition-colors">Услуги</a>
+              <a href="#advantages" onClick={(e) => scrollToSection(e, '#advantages')} className="text-foreground hover:text-primary transition-colors">Преимущества</a>
+              <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="text-foreground hover:text-primary transition-colors">Контакты</a>
             </div>
-            <Button className="hidden md:inline-flex">Связаться</Button>
+            <Button className="hidden md:inline-flex" onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}>Связаться</Button>
           </div>
         </div>
       </nav>
