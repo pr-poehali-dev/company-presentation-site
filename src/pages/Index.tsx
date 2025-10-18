@@ -30,7 +30,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Icon name="Cpu" size={32} className="text-primary" />
-              <span className="text-2xl font-bold">TechCorp</span>
+              <span className="text-2xl font-bold">ЕПУТС</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className="text-foreground hover:text-primary transition-colors">Главная</a>
@@ -71,11 +71,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                Технологии будущего
-                <span className="text-primary block">уже сегодня</span>
+                Объединенные Системы
+                <span className="text-primary block">Управления Транспортом</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                Мы создаём инновационные IT-решения, которые трансформируют ваш бизнес и открывают новые возможности
+                Разработка и внедрение автоматизированных систем управления транспортом для повышения эффективности логистики и безопасности перевозок
               </p>
               <div className="flex gap-4">
                 <Button size="lg" className="text-lg">
@@ -103,7 +103,7 @@ const Index = () => {
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">О компании</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Более 10 лет мы создаём технологические решения мирового уровня
+              Ведущий разработчик систем управления и мониторинга транспорта в России
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -115,8 +115,7 @@ const Index = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold">Миссия и ценности</h3>
               <p className="text-lg text-muted-foreground">
-                Наша компания специализируется на разработке передовых технологических продуктов. 
-                Мы помогаем бизнесу достигать новых высот через внедрение инноваций.
+                Мы создаем комплексные решения для управления транспортными системами, обеспечивая безопасность, эффективность и надежность логистических процессов. Наши технологии помогают компаниям оптимизировать затраты и повысить качество услуг.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -146,23 +145,23 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши продукты</h2>
             <p className="text-xl text-muted-foreground">
-              Инновационные решения для вашего бизнеса
+              Профессиональные решения для управления транспортом
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Database" size={28} className="text-primary" />
+                  <Icon name="MapPin" size={28} className="text-primary" />
                 </div>
-                <CardTitle className="text-2xl">Cloud Platform</CardTitle>
+                <CardTitle className="text-2xl">GPS мониторинг</CardTitle>
                 <CardDescription className="text-base">
-                  Облачная платформа для управления данными и процессами
+                  Отслеживание транспорта в режиме реального времени
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Масштабируемое решение для хранения и обработки больших данных с гарантией безопасности
+                  Контроль местоположения, маршрутов и состояния транспортных средств с высокой точностью
                 </p>
               </CardContent>
             </Card>
@@ -170,16 +169,16 @@ const Index = () => {
             <Card className="hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Brain" size={28} className="text-secondary" />
+                  <Icon name="Gauge" size={28} className="text-secondary" />
                 </div>
-                <CardTitle className="text-2xl">AI Analytics</CardTitle>
+                <CardTitle className="text-2xl">Телематика</CardTitle>
                 <CardDescription className="text-base">
-                  Платформа аналитики на основе искусственного интеллекта
+                  Дистанционный контроль параметров транспорта
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Прогнозирование трендов и автоматизация принятия решений с помощью ML-моделей
+                  Мониторинг расхода топлива, скорости, температуры и других критических показателей
                 </p>
               </CardContent>
             </Card>
@@ -187,16 +186,16 @@ const Index = () => {
             <Card className="hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Shield" size={28} className="text-primary" />
+                  <Icon name="BarChart3" size={28} className="text-primary" />
                 </div>
-                <CardTitle className="text-2xl">SecureNet</CardTitle>
+                <CardTitle className="text-2xl">Аналитика</CardTitle>
                 <CardDescription className="text-base">
-                  Комплексная система кибербезопасности
+                  Отчеты и анализ эффективности
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Защита корпоративных данных и инфраструктуры от современных угроз
+                  Детальные отчеты по использованию транспорта, затратам и оптимизации логистики
                 </p>
               </CardContent>
             </Card>
@@ -209,20 +208,20 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши услуги</h2>
             <p className="text-xl text-muted-foreground">
-              Полный спектр IT-решений для вашего бизнеса
+              Комплексный подход к управлению транспортом
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Code" size={32} className="text-primary" />
+                  <Icon name="Truck" size={32} className="text-primary" />
                 </div>
-                <CardTitle>Разработка ПО</CardTitle>
+                <CardTitle>Мониторинг транспорта</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Кастомная разработка программного обеспечения под ключ
+                  Контроль местоположения и состояния транспортных средств
                 </p>
               </CardContent>
             </Card>
@@ -230,13 +229,13 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Cloud" size={32} className="text-secondary" />
+                  <Icon name="Route" size={32} className="text-secondary" />
                 </div>
-                <CardTitle>Облачные решения</CardTitle>
+                <CardTitle>Оптимизация маршрутов</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Миграция и оптимизация инфраструктуры в облаке
+                  Планирование и корректировка маршрутов для экономии ресурсов
                 </p>
               </CardContent>
             </Card>
@@ -244,13 +243,13 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Settings" size={32} className="text-primary" />
+                  <Icon name="FileText" size={32} className="text-primary" />
                 </div>
-                <CardTitle>DevOps</CardTitle>
+                <CardTitle>Отчетность</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Автоматизация процессов развертывания и мониторинга
+                  Детальные отчеты по использованию транспорта
                 </p>
               </CardContent>
             </Card>
@@ -258,13 +257,13 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Users" size={32} className="text-secondary" />
+                  <Icon name="Wrench" size={32} className="text-secondary" />
                 </div>
-                <CardTitle>Консалтинг</CardTitle>
+                <CardTitle>Интеграция систем</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Экспертные консультации по IT-стратегии
+                  Подключение к существующим корпоративным системам
                 </p>
               </CardContent>
             </Card>
@@ -294,9 +293,9 @@ const Index = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Скорость внедрения</h3>
+                  <h3 className="text-xl font-bold mb-2">Надежность</h3>
                   <p className="text-muted-foreground">
-                    Быстрый запуск проектов благодаря проверенным методологиям и опытной команде
+                    Стабильная работа систем с минимальным временем простоя и бесперебойным мониторингом
                   </p>
                 </div>
               </div>
@@ -308,9 +307,9 @@ const Index = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Экспертиза</h3>
+                  <h3 className="text-xl font-bold mb-2">Экономия</h3>
                   <p className="text-muted-foreground">
-                    Команда сертифицированных специалистов с опытом работы в крупнейших международных проектах
+                    Снижение затрат на топливо, оптимизация маршрутов и повышение эффективности использования транспорта
                   </p>
                 </div>
               </div>
@@ -322,9 +321,9 @@ const Index = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Безопасность</h3>
+                  <h3 className="text-xl font-bold mb-2">Контроль</h3>
                   <p className="text-muted-foreground">
-                    Полное соответствие международным стандартам информационной безопасности
+                    Полный контроль над транспортом: местоположение, скорость, расход топлива и состояние транспорта
                   </p>
                 </div>
               </div>
@@ -336,9 +335,9 @@ const Index = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Поддержка 24/7</h3>
+                  <h3 className="text-xl font-bold mb-2">Интеграция</h3>
                   <p className="text-muted-foreground">
-                    Круглосуточная техническая поддержка и оперативное решение любых вопросов
+                    Легкая интеграция с любыми учетными системами и бизнес-процессами компании
                   </p>
                 </div>
               </div>
@@ -403,7 +402,7 @@ const Index = () => {
                 <Icon name="Mail" size={24} className="text-primary" />
               </div>
               <h3 className="font-semibold mb-1">Email</h3>
-              <p className="text-muted-foreground">info@techcorp.com</p>
+              <p className="text-muted-foreground">info@eputs.org</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -417,7 +416,7 @@ const Index = () => {
                 <Icon name="MapPin" size={24} className="text-primary" />
               </div>
               <h3 className="font-semibold mb-1">Офис</h3>
-              <p className="text-muted-foreground">Москва, ул. Примерная, 1</p>
+              <p className="text-muted-foreground">Россия, Москва</p>
             </div>
           </div>
         </div>
@@ -429,10 +428,10 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Icon name="Cpu" size={28} className="text-primary" />
-                <span className="text-xl font-bold">TechCorp</span>
+                <span className="text-xl font-bold">ЕПУТС</span>
               </div>
               <p className="text-background/80">
-                Инновационные технологические решения для вашего бизнеса
+                Объединенные Системы Управления Транспортом
               </p>
             </div>
             <div>
@@ -446,22 +445,22 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Продукты</h4>
               <ul className="space-y-2 text-background/80">
-                <li><a href="#products" className="hover:text-primary transition-colors">Cloud Platform</a></li>
-                <li><a href="#products" className="hover:text-primary transition-colors">AI Analytics</a></li>
-                <li><a href="#products" className="hover:text-primary transition-colors">SecureNet</a></li>
+                <li><a href="#products" className="hover:text-primary transition-colors">GPS мониторинг</a></li>
+                <li><a href="#products" className="hover:text-primary transition-colors">Телематика</a></li>
+                <li><a href="#products" className="hover:text-primary transition-colors">Аналитика</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Контакты</h4>
               <ul className="space-y-2 text-background/80">
-                <li>info@techcorp.com</li>
+                <li>info@eputs.org</li>
                 <li>+7 (495) 123-45-67</li>
                 <li>Москва, Россия</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-background/20 pt-8 text-center text-background/60">
-            <p>&copy; 2024 TechCorp. Все права защищены.</p>
+            <p>&copy; 2024 ЕПУТС. Все права защищены.</p>
           </div>
         </div>
       </footer>
