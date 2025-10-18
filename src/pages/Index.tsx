@@ -8,6 +8,15 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [vehicleCount, setVehicleCount] = useState(10);
+  const [calculatedPrice, setCalculatedPrice] = useState(0);
+
+  const calculatePrice = () => {
+    const basePrice = 500;
+    const pricePerVehicle = 300;
+    const total = basePrice + (vehicleCount * pricePerVehicle);
+    setCalculatedPrice(total);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -346,6 +355,92 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Рассчитать стоимость</h2>
+            <p className="text-xl text-muted-foreground">
+              Узнайте примерную стоимость внедрения системы для вашего парка
+            </p>
+          </div>
+          <Card className="bg-gradient-to-br from-primary/5 to-secondary/5">
+            <CardContent className="pt-8">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <label className="text-lg font-medium">Количество транспортных средств</label>
+                    <span className="text-3xl font-bold text-primary">{vehicleCount}</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value={vehicleCount}
+                    onChange={(e) => setVehicleCount(Number(e.target.value))}
+                    className="w-full h-3 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
+                  />
+                  <div className="flex justify-between text-sm text-muted-foreground">
+                    <span>1 ТС</span>
+                    <span>100 ТС</span>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm text-muted-foreground">Базовая плата</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-2xl font-bold">500 ₽/мес</p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm text-muted-foreground">За 1 ТС</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-2xl font-bold">300 ₽/мес</p>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm text-muted-foreground">Экономия топлива</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-2xl font-bold text-green-600">до 15%</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <Button 
+                  size="lg" 
+                  className="w-full text-lg"
+                  onClick={calculatePrice}
+                >
+                  Рассчитать стоимость
+                  <Icon name="Calculator" size={20} className="ml-2" />
+                </Button>
+
+                {calculatedPrice > 0 && (
+                  <Card className="bg-primary text-primary-foreground animate-scale-in">
+                    <CardContent className="pt-6">
+                      <div className="text-center space-y-2">
+                        <p className="text-sm opacity-90">Ориентировочная стоимость</p>
+                        <p className="text-5xl font-bold">{calculatedPrice.toLocaleString()} ₽</p>
+                        <p className="text-sm opacity-90">в месяц</p>
+                        <p className="text-xs opacity-75 mt-4">
+                          При парке {vehicleCount} ТС вы сэкономите до {Math.round(vehicleCount * 2500).toLocaleString()} ₽/мес на топливе
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       <section id="contact" className="py-20 px-6 bg-muted">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
@@ -396,27 +491,58 @@ const Index = () => {
             </CardContent>
           </Card>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Icon name="Mail" size={24} className="text-primary" />
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Контактная информация</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="Mail" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-medium">Email</p>
+                    <p className="text-muted-foreground">info@eputs.org</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="Phone" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-medium">Телефон</p>
+                    <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="MapPin" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-medium">Офис</p>
+                    <p className="text-muted-foreground">Россия, Москва</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-semibold mb-1">Email</h3>
-              <p className="text-muted-foreground">info@eputs.org</p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Icon name="Phone" size={24} className="text-primary" />
+            <div className="bg-muted/50 rounded-xl p-6 flex items-center justify-center">
+              <div className="text-center space-y-2">
+                <Icon name="Map" size={64} className="text-primary mx-auto mb-4" />
+                <h4 className="text-lg font-semibold">Интерактивная карта</h4>
+                <p className="text-sm text-muted-foreground">
+                  Москва, центральный офис
+                </p>
+                <div className="pt-4">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4447637736947!2d37.6156!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIwLjkiTiAzN8KwMzYnNTYuMiJF!5e0!3m2!1sru!2sru!4v1234567890"
+                    width="100%"
+                    height="200"
+                    style={{ border: 0, borderRadius: '0.5rem' }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
               </div>
-              <h3 className="font-semibold mb-1">Телефон</h3>
-              <p className="text-muted-foreground">+7 (495) 123-45-67</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Icon name="MapPin" size={24} className="text-primary" />
-              </div>
-              <h3 className="font-semibold mb-1">Офис</h3>
-              <p className="text-muted-foreground">Россия, Москва</p>
             </div>
           </div>
         </div>
