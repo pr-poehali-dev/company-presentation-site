@@ -355,6 +355,219 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 px-6 bg-muted">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Отзывы клиентов</h2>
+            <p className="text-xl text-muted-foreground">
+              Что говорят о нас наши партнеры
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="Building2" size={28} className="text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">ООО "ТрансЛогистик"</CardTitle>
+                    <CardDescription>Директор по логистике</CardDescription>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground italic">
+                  "Внедрение системы мониторинга от ЕПУТС позволило нам сократить расходы на топливо на 12% и повысить дисциплину водителей. Окупилось за 4 месяца!"
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center">
+                    <Icon name="Truck" size={28} className="text-secondary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">АО "Грузовые перевозки"</CardTitle>
+                    <CardDescription>Генеральный директор</CardDescription>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground italic">
+                  "Отличная система контроля транспорта. Техподдержка работает оперативно, все вопросы решаются быстро. Рекомендуем!"
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="Package" size={28} className="text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">ООО "Экспресс-Доставка"</CardTitle>
+                    <CardDescription>Начальник автопарка</CardDescription>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground italic">
+                  "Благодаря аналитике и отчетам мы оптимизировали маршруты и сократили время доставки на 20%. Система очень удобная и понятная."
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Успешные кейсы</h2>
+            <p className="text-xl text-muted-foreground">
+              Примеры внедрения наших решений
+            </p>
+          </div>
+          <div className="space-y-8">
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="grid md:grid-cols-2">
+                <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-8 flex items-center justify-center">
+                  <div className="text-center space-y-4">
+                    <Icon name="TrendingUp" size={64} className="text-primary mx-auto" />
+                    <div className="space-y-2">
+                      <p className="text-5xl font-bold text-primary">150+</p>
+                      <p className="text-muted-foreground">Транспортных средств</p>
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-8">
+                  <CardTitle className="text-2xl mb-4">Федеральная транспортная компания</CardTitle>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold mb-2">Задача:</h4>
+                      <p className="text-muted-foreground">
+                        Контроль парка из 150+ грузовых автомобилей по всей России, снижение расходов на топливо
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Решение:</h4>
+                      <p className="text-muted-foreground">
+                        Внедрение GPS-мониторинга с контролем топлива и телематики
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Результат:</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                        <li>Экономия топлива 14% за первые 6 месяцев</li>
+                        <li>Снижение простоев на 25%</li>
+                        <li>ROI достигнут за 5 месяцев</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="grid md:grid-cols-2">
+                <div className="bg-gradient-to-br from-secondary/10 to-secondary/5 p-8 flex items-center justify-center order-2 md:order-1">
+                  <div className="text-center space-y-4">
+                    <Icon name="Clock" size={64} className="text-secondary mx-auto" />
+                    <div className="space-y-2">
+                      <p className="text-5xl font-bold text-secondary">-30%</p>
+                      <p className="text-muted-foreground">Время доставки</p>
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-8 order-1 md:order-2">
+                  <CardTitle className="text-2xl mb-4">Курьерская служба</CardTitle>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold mb-2">Задача:</h4>
+                      <p className="text-muted-foreground">
+                        Оптимизация маршрутов курьеров, повышение скорости доставки в мегаполисе
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Решение:</h4>
+                      <p className="text-muted-foreground">
+                        Система мониторинга с модулем оптимизации маршрутов и аналитикой
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Результат:</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                        <li>Сокращение времени доставки на 30%</li>
+                        <li>Увеличение количества заказов на 40%</li>
+                        <li>Повышение удовлетворенности клиентов</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="grid md:grid-cols-2">
+                <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-8 flex items-center justify-center">
+                  <div className="text-center space-y-4">
+                    <Icon name="Shield" size={64} className="text-primary mx-auto" />
+                    <div className="space-y-2">
+                      <p className="text-5xl font-bold text-primary">100%</p>
+                      <p className="text-muted-foreground">Безопасность грузов</p>
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-8">
+                  <CardTitle className="text-2xl mb-4">Строительная компания</CardTitle>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold mb-2">Задача:</h4>
+                      <p className="text-muted-foreground">
+                        Контроль техники на стройплощадках, предотвращение краж топлива и нецелевого использования
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Решение:</h4>
+                      <p className="text-muted-foreground">
+                        GPS-мониторинг с датчиками топлива и контролем моточасов
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Результат:</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                        <li>Полное устранение краж топлива</li>
+                        <li>Снижение затрат на ГСМ на 18%</li>
+                        <li>Прозрачная отчетность для руководства</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
